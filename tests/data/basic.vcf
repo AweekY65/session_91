@@ -1,0 +1,16 @@
+##fileformat=VCFv4.2
+##contig=<ID=chr1,length=1000000>
+##contig=<ID=chr2,length=500000>
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Total depth">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Allele frequency">
+##INFO=<ID=TYPE,Number=A,Type=String,Description="Variant type">
+##INFO=<ID=DB,Number=0,Type=Flag,Description="db membership">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Sample depth">
+##FORMAT=<ID=AD,Number=R,Type=Integer,Description="Allelic depths">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	HG001	HG002	HG003
+chr1	100	rs1	A	G	50	PASS	DP=30;AF=0.5;TYPE=SNP	GT:DP	0/1:12	1/1:10	0|0:8
+chr1	200	rs2	AC	A	20	q10	DP=25;AF=0.25;TYPE=INDEL	GT:DP	0/1:9	./.:0	0/0:16
+chr1	300	rs3	C	T,G	99	PASS	DP=40;AF=0.3,0.1;TYPE=SNP,SNP;DB	GT:DP:AD	0/1:15:10,5,0	1/2:20:8,6,6	2/2:5:0,0,5
+chr2	150	rs4	G	GA	.	PASS	DP=10;TYPE=INDEL	GT	0|1	1|1	./.
+chr2	250	rs5	T	C	5	LowQual	DP=3;TYPE=SNP	GT	0/0	0/0	0/1
